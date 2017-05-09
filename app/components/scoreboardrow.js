@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { ActionCreators } from '../actions';
+import { bindActionCreators } from 'redux';
 import {
   AppRegistry,
   StyleSheet,
@@ -13,23 +16,31 @@ class ScoreBoardRow extends Component {
     super(props);
   }
 
-  buttonClicked() {
-    alert('button clicked');
+  buttonClicked(id) {
+    if (id == 0){
+      this.props.changeP1Score();
+    } else {
+      this.props.changeP2Score();
+    }
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Button style={styles.circle} onPress={() => this.buttonClicked()}>
+        <Button style={styles.circle} onPress={() => this.buttonClicked(0)}>
           <Text style={styles.text}>{this.props.p1score}</Text>
         </Button>
         <Text style={styles.number}>{this.props.value}</Text>
-        <Button style={styles.circle} onPress={() => this.buttonClicked()}>
+        <Button style={styles.circle} onPress={() => this.buttonClicked(1)}>
           <Text style={styles.text}>{this.props.p2score}</Text>
         </Button>
       </View>
     );
   }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(ActionCreators, dispatch);
 }
 
 const styles = StyleSheet.create({
@@ -59,4 +70,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ScoreBoardRow
+export default connect((state) => {
+  return {
+    p1score: state.p1score,
+    p2score: state.p2score
+  }
+}, mapDispatchToProps)(ScoreBoardRow);
