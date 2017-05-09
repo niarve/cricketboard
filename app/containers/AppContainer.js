@@ -16,10 +16,6 @@ class AppContainer extends Component {
     super(props);
   }
 
-  incrementCount() {
-    this.props.incrementCount();
-  }
-
   render() {
     return (
       <View style={styles.container}>
