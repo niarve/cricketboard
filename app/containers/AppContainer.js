@@ -23,14 +23,9 @@ class AppContainer extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.margin}>
-          I am App container! count: {this.props.count}
+        <Text style={styles.title}>
+          klenke
         </Text>
-        <TouchableHighlight onPress={() => {this.incrementCount() }}>
-          <Text>
-            Increment
-          </Text>
-        </TouchableHighlight>
         <Names/>
         <Board/>
       </View>
@@ -49,13 +44,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#3B653D'
   },
-  margin: {
-    marginTop: 20
+  title: {
+    color: '#fff',
+    fontSize: 40,
+    fontWeight: 'bold',
+    margin: 20
   }
 });
 
-export default connect((state) => {
-  return {
-    count: state.count
-  }
-}, mapDispatchToProps)(AppContainer);
+export default connect(() => { return {} }, mapDispatchToProps)(AppContainer);

@@ -32,12 +32,5 @@ export const p2score = createReducer(' ', {
       default:
         return 'Error';
     }
-
-  }
-});
-
-export const count = createReducer(0, {
-  [types.INCREMENT_COUNT](state, action) {
-    return state + 10;
   }
 });
