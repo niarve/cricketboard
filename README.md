@@ -38,4 +38,5 @@ An iOS simulator will automatically appear with the app! Otherwise, you can also
 ```sh
     $ react-native run-android
 ```
+App is currently untested in Android so be warned!
 ---
