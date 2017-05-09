@@ -16,22 +16,22 @@ class ScoreBoardRow extends Component {
     super(props);
   }
 
-  buttonClicked(id) {
-    if (id == 0){
-      this.props.changeP1Score();
-    } else {
-      this.props.changeP2Score();
-    }
+  changeP1Score(value) {
+    this.props.changeP1Score(value);
+  }
+
+  changeP2Score(value) {
+    this.props.changeP2Score(value);
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Button style={styles.circle} onPress={() => this.buttonClicked(0)}>
+        <Button style={styles.circle} onPress={() => this.changeP1Score(this.props.value)}>
           <Text style={styles.text}>{this.props.p1score}</Text>
         </Button>
         <Text style={styles.number}>{this.props.value}</Text>
-        <Button style={styles.circle} onPress={() => this.buttonClicked(1)}>
+        <Button style={styles.circle} onPress={() => this.changeP2Score(this.props.value)}>
           <Text style={styles.text}>{this.props.p2score}</Text>
         </Button>
       </View>
