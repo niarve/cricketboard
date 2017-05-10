@@ -1,4 +1,5 @@
 export const ERROR = 'ERROR'
+export const RESET = 'RESET'
 
 export const CHANGE_P1_SCORE_15 = 'CHANGE_P1_SCORE_15';
 export const CHANGE_P1_SCORE_16 = 'CHANGE_P1_SCORE_16';
