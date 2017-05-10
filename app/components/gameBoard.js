@@ -57,6 +57,10 @@ class GameBoard extends Component {
     this.props.reset();
   }
 
+  undo(){
+    this.props.undo();
+  }
+
   render() {
     const { player1, player2 } = this.props.players;
     return (
@@ -144,6 +148,9 @@ class GameBoard extends Component {
           </View>
         </View>
         <View style={styles.row}>
+          <Button style={styles.circle} onPress={() => this.undo()}>
+            <Text style={styles.reset}>Undo</Text>
+          </Button>
           <Button style={styles.circle} onPress={() => this.reset()}>
             <Text style={styles.reset}>Reset</Text>
           </Button>

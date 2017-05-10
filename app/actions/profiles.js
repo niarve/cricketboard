@@ -61,3 +61,9 @@ export function reset() {
     type: types.RESET
   };
 }
+
+export function undo() {
+  return {
+    type: types.UNDO
+  };
+}
