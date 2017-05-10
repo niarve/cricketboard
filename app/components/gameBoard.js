@@ -58,7 +58,7 @@ class GameBoard extends Component {
   }
 
   undo(){
-    this.props.undo();
+    if(typeof this.props.players.oldPlayers != "undefined") this.props.undo();
   }
 
   render() {
