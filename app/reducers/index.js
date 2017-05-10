@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import * as scoresReducer from './scores';
+import * as profilesReducer from './profiles';
 
 export default combineReducers(Object.assign(
-  scoresReducer,
+  profilesReducer,
 ));

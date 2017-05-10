@@ -41,3 +41,17 @@ export function changeP2Score(value) {
       return {type: types.ERROR};
   }
 }
+
+export function changeP1Name(value) {
+  return {
+    type: types.CHANGE_P1_NAME,
+    name: value
+  };
+}
+
+export function changeP2Name(value) {
+  return {
+    type: types.CHANGE_P2_NAME,
+    name: value
+  };
+}

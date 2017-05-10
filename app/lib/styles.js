@@ -8,9 +8,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   row: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'flex-start',
+  },
+  names: {
+    flex: .2,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+    backgroundColor: '#3B653D',
+    width: 50,
+    height: 50,
+    textAlign: 'center',
   },
   number: {
     fontWeight: 'bold',

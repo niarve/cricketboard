@@ -1,7 +1,5 @@
 export const ERROR = 'ERROR'
 
-export const SET_SCORE = 'SET_SCORE';
-
 export const CHANGE_P1_SCORE_15 = 'CHANGE_P1_SCORE_15';
 export const CHANGE_P1_SCORE_16 = 'CHANGE_P1_SCORE_16';
 export const CHANGE_P1_SCORE_17 = 'CHANGE_P1_SCORE_17';
@@ -17,3 +15,6 @@ export const CHANGE_P2_SCORE_18 = 'CHANGE_P2_SCORE_18';
 export const CHANGE_P2_SCORE_19 = 'CHANGE_P2_SCORE_19';
 export const CHANGE_P2_SCORE_20 = 'CHANGE_P2_SCORE_20';
 export const CHANGE_P2_SCORE_50 = 'CHANGE_P2_SCORE_50';
+
+export const CHANGE_P1_NAME = 'CHANGE_P1_NAME';
+export const CHANGE_P2_NAME = 'CHANGE_P2_NAME';
