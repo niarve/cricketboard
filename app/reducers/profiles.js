@@ -29,9 +29,6 @@ const intialState = {
 export const players = createReducer(
   intialState,
   {
-  [types.NEW_PLAYER](state, action) {
-    return state;
-  },
   [types.CHANGE_P1_SCORE_15](state, action) {
     return {
       ...state,
