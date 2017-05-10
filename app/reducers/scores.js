@@ -1,7 +1,7 @@
 import createReducer from '../lib/createReducer';
 import * as types from '../actions/types';
 
-export const p1score = createReducer(' ', {
+export const player = createReducer(' ', {
   [types.CHANGE_P1_SCORE](state, action) {
     switch (state){
       case ' ':
