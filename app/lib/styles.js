@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    alignItems: 'flex-start',
   },
   names: {
     flex: .2,
@@ -19,7 +18,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     backgroundColor: '#3B653D',
-    width: 50,
+    width: 20,
     height: 50,
     textAlign: 'center',
   },
@@ -29,8 +28,17 @@ const styles = StyleSheet.create({
     width: 100,
     height: 75,
     textAlign: 'center',
-    fontSize: 55,
-    marginTop: -10,
+    fontSize: 50,
+    marginTop: -5,
+  },
+  score: {
+    fontSize: 30,
+    color: '#fff',
+    alignSelf: 'center',
+  },
+  scoreText: {
+    fontSize: 30,
+    color: '#fff',
   },
   circle: {
     borderWidth: 0,
@@ -40,7 +48,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     backgroundColor: '#3B653D',
-    fontSize: 55,
+    fontSize: 50,
   },
 });
 

@@ -11,6 +11,7 @@ const intialState = {
     s19: 0,
     s20: 0,
     s50: 0,
+    score: 0,
   },
   player2: {
     name: 'Player2',
@@ -21,6 +22,7 @@ const intialState = {
     s19: 0,
     s20: 0,
     s50: 0,
+    score: 0,
   },
 }
 
@@ -35,7 +37,8 @@ export const players = createReducer(
       ...state,
       player1: {
         ...state.player1,
-        s15: state.player1.s15 + 1
+        s15: state.player1.s15 + 1,
+        score: action.updateScore ? state.player1.score + 15 : state.player1.score,
       }
     };
   },
@@ -44,7 +47,8 @@ export const players = createReducer(
       ...state,
       player1: {
         ...state.player1,
-        s16: state.player1.s16 + 1
+        s16: state.player1.s16 + 1,
+        score: action.updateScore ? state.player1.score + 16 : state.player1.score,
       }
     };
   },
@@ -53,7 +57,8 @@ export const players = createReducer(
       ...state,
       player1: {
         ...state.player1,
-        s17: state.player1.s17 + 1
+        s17: state.player1.s17 + 1,
+        score: action.updateScore ? state.player1.score + 17 : state.player1.score,
       }
     };
   },
@@ -62,7 +67,8 @@ export const players = createReducer(
       ...state,
       player1: {
         ...state.player1,
-        s18: state.player1.s18 + 1
+        s18: state.player1.s18 + 1,
+        score: action.updateScore ? state.player1.score + 18 : state.player1.score,
       }
     };
   },
@@ -71,7 +77,8 @@ export const players = createReducer(
       ...state,
       player1: {
         ...state.player1,
-        s19: state.player1.s19 + 1
+        s19: state.player1.s19 + 1,
+        score: action.updateScore ? state.player1.score + 19 : state.player1.score,
       }
     };
   },
@@ -80,7 +87,8 @@ export const players = createReducer(
       ...state,
       player1: {
         ...state.player1,
-        s20: state.player1.s20 + 1
+        s20: state.player1.s20 + 1,
+        score: action.updateScore ? state.player1.score + 20 : state.player1.score,
       }
     };
   },
@@ -89,7 +97,8 @@ export const players = createReducer(
       ...state,
       player1: {
         ...state.player1,
-        s50: state.player1.s50 + 1
+        s50: state.player1.s50 + 1,
+        score: action.updateScore ? state.player1.score + 50 : state.player1.score,
       }
     };
   },
@@ -99,7 +108,8 @@ export const players = createReducer(
       ...state,
       player2: {
         ...state.player2,
-        s15: state.player2.s15 + 1
+        s15: state.player2.s15 + 1,
+        score: action.updateScore ? state.player2.score + 15 : state.player2.score,
       }
     };
   },
@@ -108,7 +118,8 @@ export const players = createReducer(
       ...state,
       player2: {
         ...state.player2,
-        s16: state.player2.s16 + 1
+        s16: state.player2.s16 + 1,
+        score: action.updateScore ? state.player2.score + 16 : state.player2.score,
       }
     };
   },
@@ -117,7 +128,8 @@ export const players = createReducer(
       ...state,
       player2: {
         ...state.player2,
-        s17: state.player2.s17 + 1
+        s17: state.player2.s17 + 1,
+        score: action.updateScore ? state.player2.score + 17 : state.player2.score,
       }
     };
   },
@@ -126,7 +138,8 @@ export const players = createReducer(
       ...state,
       player2: {
         ...state.player2,
-        s18: state.player2.s18 + 1
+        s18: state.player2.s18 + 1,
+        score: action.updateScore ? state.player2.score + 18 : state.player2.score,
       }
     };
   },
@@ -135,7 +148,8 @@ export const players = createReducer(
       ...state,
       player2: {
         ...state.player2,
-        s19: state.player2.s19 + 1
+        s19: state.player2.s19 + 1,
+        score: action.updateScore ? state.player2.score + 19 : state.player2.score,
       }
     };
   },
@@ -144,7 +158,8 @@ export const players = createReducer(
       ...state,
       player2: {
         ...state.player2,
-        s20: state.player2.s20 + 1
+        s20: state.player2.s20 + 1,
+        score: action.updateScore ? state.player2.score + 20 : state.player2.score,
       }
     };
   },
@@ -153,10 +168,12 @@ export const players = createReducer(
       ...state,
       player2: {
         ...state.player2,
-        s50: state.player2.s50 + 1
+        s50: state.player2.s50 + 1,
+        score: action.updateScore ? state.player2.score + 50 : state.player2.score,
       }
     };
   },
+  //change names
   [types.CHANGE_P1_NAME](state, action) {
     return {
       ...state,
