@@ -53,6 +53,10 @@ class GameBoard extends Component {
     this.props.changeP2Name(value);
   }
 
+  reset(){
+    this.props.reset();
+  }
+
   render() {
     const { player1, player2 } = this.props.players;
     return (
@@ -138,6 +142,11 @@ class GameBoard extends Component {
           <View style={styles.circle}>
             <Text style={styles.score}>{player2.score == 0 ? '' : player2.score}</Text>
           </View>
+        </View>
+        <View style={styles.row}>
+          <Button style={styles.circle} onPress={() => this.reset()}>
+            <Text style={styles.reset}>Reset</Text>
+          </Button>
         </View>
       </View>
     );

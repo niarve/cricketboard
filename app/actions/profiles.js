@@ -55,3 +55,9 @@ export function changeP2Name(value) {
     name: value
   };
 }
+
+export function reset() {
+  return {
+    type: types.RESET
+  };
+}

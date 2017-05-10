@@ -50,6 +50,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#3B653D',
     fontSize: 50,
   },
+  reset: {
+    fontSize: 20,
+    color: '#fff',
+    opacity: .7,
+  }
 });
 
 export default styles
