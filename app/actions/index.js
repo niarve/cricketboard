@@ -1,5 +1,5 @@
-import * as ScoreActions from './scores';
+import * as ProfileActions from './profiles';
 
-export const ActionCreators = Object.assign({}, 
-  ScoreActions,
+export const ActionCreators = Object.assign({},
+  ProfileActions,
 );
