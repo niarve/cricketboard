@@ -19,7 +19,7 @@ class AppContainer extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>
-          klenke
+          KLENKE
         </Text>
         <GameBoard/>
       </View>
@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 40,
     fontWeight: 'bold',
-    margin: 20
+    fontFamily: 'Bradley Hand',
+    margin: 30
   }
 });
 

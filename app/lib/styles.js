@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     backgroundColor: '#3B653D',
+    opacity: .7,
     width: 20,
     height: 50,
     textAlign: 'center',
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   scoreText: {
+    fontStyle: 'italic',
     fontSize: 30,
     color: '#fff',
   },
