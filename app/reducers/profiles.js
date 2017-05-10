@@ -192,5 +192,8 @@ export const players = createReducer(
       }
     };
   },
+  [types.RESET](state, action) {
+    return intialState;
+  },
 
 });
