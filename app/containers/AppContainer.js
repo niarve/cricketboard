@@ -8,8 +8,6 @@ import {
   Text,
   TouchableHighlight
 } from 'react-native';
-import Names from '../components/names';
-import Board from '../components/board';
 import GameBoard from '../components/gameBoard';
 
 class AppContainer extends Component {
