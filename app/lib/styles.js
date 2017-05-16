@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   row: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
   },
   names: {
     flex: .2,
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
   circle: {
     borderWidth: 0,
     width: em(4),
+    marginHorizontal: em(2),
   },
   text: {
     fontWeight: 'bold',
