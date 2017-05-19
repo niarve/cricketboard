@@ -119,7 +119,7 @@ export const players = createReducer(
       player1: {
         ...state.player1,
         s50: state.player1.s50 + 1,
-        score: action.updateScore ? state.player1.score + 50 : state.player1.score,
+        score: action.updateScore ? state.player1.score + 25 : state.player1.score,
       },
       oldPlayers: {
         player1: state.player1,
@@ -218,7 +218,7 @@ export const players = createReducer(
       player2: {
         ...state.player2,
         s50: state.player2.s50 + 1,
-        score: action.updateScore ? state.player2.score + 50 : state.player2.score,
+        score: action.updateScore ? state.player2.score + 25 : state.player2.score,
       },
       oldPlayers: {
         player1: state.player1,
