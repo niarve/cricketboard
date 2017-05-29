@@ -130,12 +130,12 @@ class GameBoard extends Component {
           </Button>
         </View>
         <View style={styles.row}>
-          <Button style={styles.circle} onPress={() => this.changeP1Score(50, player1.s50, player2.s50)}>
-            <Text style={styles.text}>{this.displayHelper(player1.s50)}</Text>
+          <Button style={styles.circle} onPress={() => this.changeP1Score(25, player1.s25, player2.s25)}>
+            <Text style={styles.text}>{this.displayHelper(player1.s25)}</Text>
           </Button>
           <Text style={styles.number}>B</Text>
-          <Button style={styles.circle} onPress={() => this.changeP2Score(50, player2.s50, player1.s50)}>
-            <Text style={styles.text}>{this.displayHelper(player2.s50)}</Text>
+          <Button style={styles.circle} onPress={() => this.changeP2Score(25, player2.s25, player1.s25)}>
+            <Text style={styles.text}>{this.displayHelper(player2.s25)}</Text>
           </Button>
         </View>
         <View style={styles.row}>

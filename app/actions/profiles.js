@@ -14,8 +14,8 @@ export function changeP1Score(value, updateScore) {
       return {type: types.CHANGE_P1_SCORE_19, updateScore: updateScore};
     case 20:
       return {type: types.CHANGE_P1_SCORE_20, updateScore: updateScore};
-    case 50:
-      return {type: types.CHANGE_P1_SCORE_50, updateScore: updateScore};
+    case 25:
+      return {type: types.CHANGE_P1_SCORE_25, updateScore: updateScore};
     default:
       return {type: types.ERROR};
   }
@@ -35,8 +35,8 @@ export function changeP2Score(value) {
       return {type: types.CHANGE_P2_SCORE_19, updateScore: updateScore};
     case 20:
       return {type: types.CHANGE_P2_SCORE_20, updateScore: updateScore};
-    case 50:
-      return {type: types.CHANGE_P2_SCORE_50, updateScore: updateScore};
+    case 25:
+      return {type: types.CHANGE_P2_SCORE_25, updateScore: updateScore};
     default:
       return {type: types.ERROR};
   }

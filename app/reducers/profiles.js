@@ -10,7 +10,7 @@ const intialState = {
     s18: 0,
     s19: 0,
     s20: 0,
-    s50: 0,
+    s25: 0,
     score: 0,
   },
   player2: {
@@ -21,7 +21,7 @@ const intialState = {
     s18: 0,
     s19: 0,
     s20: 0,
-    s50: 0,
+    s25: 0,
     score: 0,
   },
 }
@@ -113,13 +113,13 @@ export const players = createReducer(
       }
     };
   },
-  [types.CHANGE_P1_SCORE_50](state, action) {
+  [types.CHANGE_P1_SCORE_25](state, action) {
     return {
       ...state,
       player1: {
         ...state.player1,
-        s50: state.player1.s50 + 1,
-        score: action.updateScore ? state.player1.score + 50 : state.player1.score,
+        s25: state.player1.s25 + 1,
+        score: action.updateScore ? state.player1.score + 25 : state.player1.score,
       },
       oldPlayers: {
         player1: state.player1,
@@ -212,13 +212,13 @@ export const players = createReducer(
       }
     };
   },
-  [types.CHANGE_P2_SCORE_50](state, action) {
+  [types.CHANGE_P2_SCORE_25](state, action) {
     return {
       ...state,
       player2: {
         ...state.player2,
-        s50: state.player2.s50 + 1,
-        score: action.updateScore ? state.player2.score + 50 : state.player2.score,
+        s25: state.player2.s25 + 1,
+        score: action.updateScore ? state.player2.score + 25 : state.player2.score,
       },
       oldPlayers: {
         player1: state.player1,
