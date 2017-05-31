@@ -246,7 +246,16 @@ export const players = createReducer(
     };
   },
   [types.RESET](state, action) {
-    return intialState;
+    return {
+      player1: {
+        ...intialState.player1,
+        name: state.player1.name
+      },
+      player2: {
+        ...intialState.player2,
+        name: state.player2.name
+      }
+    };
   },
   [types.UNDO](state, action) {
     return {

@@ -45,12 +45,12 @@ class GameBoard extends Component {
     this.props.changeP2Score(value, updateScore);
   }
 
-  changeP1Name(value) {
-    this.props.changeP1Name(value);
+  changeP1Name(name) {
+    this.props.changeP1Name(name);
   }
 
-  changeP2Name(value) {
-    this.props.changeP2Name(value);
+  changeP2Name(name) {
+    this.props.changeP2Name(name);
   }
 
   reset(){
@@ -67,11 +67,11 @@ class GameBoard extends Component {
       <View style={styles.container}>
         <View style={styles.row}>
           <TextInput style={styles.names}
-          onChangeText={(player1) => this.changeP1Name({player1})}
+          onChangeText={(name) => this.changeP1Name({name})}
           value={player1.name}
           />
           <TextInput style={styles.names}
-          onChangeText={(player2) => this.changeP2Name({player2})}
+          onChangeText={(name) => this.changeP2Name({name})}
           value={player2.name}
           />
         </View>
