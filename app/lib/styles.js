@@ -56,7 +56,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#fff',
     opacity: .7,
-  }
+  },
+  modal: {
+    zIndex: 1000,
+  },
+  title: {
+    color: '#fff',
+    fontSize: 40,
+    fontWeight: 'bold',
+    fontFamily: 'Bradley Hand',
+    margin: 30
+  },
 });
 
 export default styles

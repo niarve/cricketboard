@@ -9,10 +9,15 @@ import {
 } from 'react-native';
 import Button from 'apsl-react-native-button';
 import styles from '../lib/styles';
+import Icon from 'react-native-vector-icons/Ionicons';
+import Modal from 'react-native-modalbox';
 
 class GameBoard extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showModal: true,
+    }
   }
 
   displayHelper(score) {
@@ -57,6 +62,14 @@ class GameBoard extends Component {
     this.props.reset();
   }
 
+  _changeModalVisibility(){
+    this.props.changeModalVisibility();
+  };
+
+  setModalVisible(visible) {
+   this.props.changeModalVisibility();
+ };
+
   undo(){
     if(typeof this.props.players.oldPlayers != "undefined") this.props.undo();
   }
@@ -65,6 +78,10 @@ class GameBoard extends Component {
     const { player1, player2 } = this.props.players;
     return (
       <View style={styles.container}>
+        <Text style={styles.title}>
+          KLENKE
+        </Text>
+        <Icon.Button name="ios-settings" backgroundColor="#3B653D" onPress={() => this.setState({showModal: !this.state.showModal})}/>
         <View style={styles.row}>
           <TextInput style={styles.names}
           onChangeText={(name) => this.changeP1Name({name})}
@@ -155,6 +172,11 @@ class GameBoard extends Component {
             <Text style={styles.reset}>Reset</Text>
           </Button>
         </View>
+
+        <Modal style={[styles.modal]} position={"center"} isOpen={this.state.showModal}>
+          <Text style={styles.text}>Modal centered</Text>
+          <Button onPress={() => this.setState({showModal: !this.state.showModal})} style={styles.btn}>Disable ({this.state.showModal ? "true" : "false"})</Button>
+        </Modal>
       </View>
     );
   }
@@ -166,6 +188,7 @@ function mapDispatchToProps(dispatch) {
 
 export default connect((state) => {
   return {
-    players: state.players
+    players: state.players,
+    showModal: state.showModal
   }
 }, mapDispatchToProps)(GameBoard);

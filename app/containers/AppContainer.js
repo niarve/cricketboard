@@ -6,7 +6,6 @@ import {
   View,
   StyleSheet,
   Text,
-  TouchableHighlight
 } from 'react-native';
 import GameBoard from '../components/gameBoard';
 
@@ -18,9 +17,6 @@ class AppContainer extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>
-          KLENKE
-        </Text>
         <GameBoard/>
       </View>
     );
@@ -44,7 +40,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Bradley Hand',
     margin: 30
-  }
+  },
 });
 
-export default connect(() => { return {} }, mapDispatchToProps)(AppContainer);
+export default connect((state) => { return {
+  players: state.players,
+  showModal: state.showModal
+} }, mapDispatchToProps)(AppContainer);
