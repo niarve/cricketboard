@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { em } from './em';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,50 +11,50 @@ const styles = StyleSheet.create({
   row: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
   },
   names: {
     flex: .2,
-    fontSize: 20,
+    fontSize: em(1.5),
     fontWeight: 'bold',
     color: '#fff',
     backgroundColor: '#3B653D',
     opacity: .7,
-    width: 20,
-    height: 50,
+    width: em(1.5),
+    height: em(2.5),
     textAlign: 'center',
   },
   number: {
     fontWeight: 'bold',
     color: '#fff',
-    width: 100,
-    height: 75,
+    width: em(4),
+    height: em(3),
     textAlign: 'center',
-    fontSize: 50,
-    marginTop: -5,
+    fontSize: em(2.5),
   },
   score: {
-    fontSize: 30,
+    fontSize: em(2),
     color: '#fff',
     alignSelf: 'center',
   },
   scoreText: {
     fontStyle: 'italic',
-    fontSize: 30,
+    fontSize: em(2),
     color: '#fff',
   },
   circle: {
     borderWidth: 0,
-    width: 100,
+    width: em(4),
+    marginHorizontal: em(2),
   },
   text: {
     fontWeight: 'bold',
     color: '#fff',
     backgroundColor: '#3B653D',
-    fontSize: 50,
+    fontSize: em(2.5),
   },
   reset: {
-    fontSize: 20,
+    fontSize: em(1.5),
     color: '#fff',
     opacity: .7,
   },
