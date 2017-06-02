@@ -33,7 +33,6 @@ export const players = createReducer(intialState, {
       player1: {
         ...state.player1,
         s15: state.player1.s15 + 1,
-        score: action.updateScore ? state.player1.score + 15 : state.player1.score,
       },
       oldPlayers: {
         player1: state.player1,

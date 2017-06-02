@@ -34,13 +34,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#3B653D'
   },
-  title: {
-    color: '#fff',
-    fontSize: 40,
-    fontWeight: 'bold',
-    fontFamily: 'Bradley Hand',
-    margin: 30
-  },
 });
 
 export default connect((state) => { return {
