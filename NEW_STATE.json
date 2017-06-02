@@ -1,0 +1,40 @@
+{
+  "title": "Klenke",
+  "players": [
+    {
+      "name": "Player1",
+      "hits": {
+        "15": "int",
+        "16": "int",
+        "17": "int",
+        "18": "int",
+        "19": "int",
+        "20": "int",
+        "25": "int",
+      },
+      "score": "int",
+    },
+    {
+      "name": "Player2",
+      "hits": {
+        "15": "int",
+        "16": "int",
+        "17": "int",
+        "18": "int",
+        "19": "int",
+        "20": "int",
+        "25": "int",
+      },
+      "score": "int",
+    },
+    ...
+  ],
+  "modal": {
+    "open": "bool",
+    "settings": "bool",
+  },
+  "settings": {
+    "score": "bool",
+    "players": "int",
+  }
+}
