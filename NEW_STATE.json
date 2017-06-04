@@ -34,7 +34,8 @@
     "settings": "bool",
   },
   "settings": {
-    "score": "bool",
     "players": "int",
+    "score": "bool",
+    "scoreLimit": "int",
   }
 }

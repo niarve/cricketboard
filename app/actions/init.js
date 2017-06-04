@@ -1,7 +1,7 @@
 import * as types from './types';
 
-export function reset() {
+export function init() {
   return {
-    type: types.RESET
+    type: types.INIT
   };
 }

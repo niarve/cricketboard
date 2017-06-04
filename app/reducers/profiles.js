@@ -1,32 +1,8 @@
 import createReducer from '../lib/createReducer';
 import * as types from '../actions/types';
+import { initialState } from '../lib/initialState';
 
-const intialState = {
-  player1: {
-    name: 'Player1',
-    s15: 0,
-    s16: 0,
-    s17: 0,
-    s18: 0,
-    s19: 0,
-    s20: 0,
-    s25: 0,
-    score: 0,
-  },
-  player2: {
-    name: 'Player2',
-    s15: 0,
-    s16: 0,
-    s17: 0,
-    s18: 0,
-    s19: 0,
-    s20: 0,
-    s25: 0,
-    score: 0,
-  },
-}
-
-export const player = createReducer(intialState, {
+export const players = createReducer(initialState, {
   [types.CHANGE_P1_SCORE_15](state, action) {
     return {
       ...state,

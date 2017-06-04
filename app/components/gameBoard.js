@@ -19,6 +19,8 @@ class GameBoard extends Component {
       showModal: true,
     }
     this.scores = [15, 16, 17, 18, 19, 20, 25]; //used to create the scoreboard
+    // console.log('constructor');
+    // if( typeof this.props.players == 'undefined' ) this.props.init();
   }
 
   displayHelper(score) {
@@ -41,19 +43,15 @@ class GameBoard extends Component {
     return displayFigure;
   }
 
-  displayScoreHelper(value, player){
-    switch(value) {
-      case 15:
-
-        break;
-    }
+  fetchUsers() {
+    this.props.init();
   }
 
-  changeP1Score(value) {
+  _changeP1Score(value) {
     this.props.changeP1Score(value);
   }
 
-  changeP2Score(value) {
+  _changeP2Score(value) {
     this.props.changeP2Score(value);
   }
 
@@ -78,13 +76,20 @@ class GameBoard extends Component {
   };
 
   componentWillMount() {
+    // TODO: change this
+    console.log('componentWillMount');
+    if( typeof this.props.players.player1 == 'undefined' ) this.fetchUsers();
     this._reset = this._reset.bind(this);
     this._undo = this._undo.bind(this);
     this._changeP1Name = this._changeP1Name.bind(this);
     this._changeP2Name = this._changeP2Name.bind(this);
+    this._changeP1Score = this._changeP1Score.bind(this);
+    this._changeP2Score = this._changeP2Score.bind(this);
   }
 
   render() {
+    // TODO: remove this
+    console.log('nate', this.props);
     const { player1, player2 } = this.props.players;
     return (
       <View style={styles.container}>
@@ -109,8 +114,8 @@ class GameBoard extends Component {
           this.scores.map((value) => {
             return (
               <View key={value} style={styles.row}>
-                <Button style={styles.circle} onPress={() => {this.changeP1Score(value)}}>
-                  <Text style={styles.text}>{this.displayHelper(player1.s20)}</Text>
+                <Button style={styles.circle} onPress={() => {this._changeP1Score(value)}}>
+                  <Text style={styles.text}>{}</Text>
                 </Button>
                 <Text style={styles.number}>{value == '25' ? 'B' : value}</Text>
                 <Button style={styles.circle} onPress={() => {this.changeP2Score(value)}}>

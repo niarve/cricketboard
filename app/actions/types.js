@@ -1,3 +1,4 @@
+export const INIT = 'INIT'
 export const ERROR = 'ERROR'
 export const RESET = 'RESET'
 export const UNDO = 'UNDO'

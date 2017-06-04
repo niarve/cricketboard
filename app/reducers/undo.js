@@ -1,7 +1,7 @@
 import createReducer from '../lib/createReducer';
 import * as types from '../actions/types';
 
-export const undo = createReducer(intialState, {
+export const undo = createReducer({}, {
   [types.UNDO](state, action) {
     return {
       ...state,
