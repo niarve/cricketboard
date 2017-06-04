@@ -19,8 +19,6 @@ class GameBoard extends Component {
       showModal: true,
     }
     this.scores = [15, 16, 17, 18, 19, 20, 25]; //used to create the scoreboard
-    // console.log('constructor');
-    // if( typeof this.props.players == 'undefined' ) this.props.init();
   }
 
   displayHelper(score) {
@@ -76,9 +74,7 @@ class GameBoard extends Component {
   };
 
   componentWillMount() {
-    // TODO: change this
-    console.log('componentWillMount');
-    if( typeof this.props.players.player1 == 'undefined' ) this.fetchUsers();
+    if( typeof this.props.players == 'undefined' ) this.fetchUsers();
     this._reset = this._reset.bind(this);
     this._undo = this._undo.bind(this);
     this._changeP1Name = this._changeP1Name.bind(this);
@@ -88,8 +84,6 @@ class GameBoard extends Component {
   }
 
   render() {
-    // TODO: remove this
-    console.log('nate', this.props);
     const { player1, player2 } = this.props.players;
     return (
       <View style={styles.container}>
